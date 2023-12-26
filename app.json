@@ -8,6 +8,22 @@
       "expo-router"
     ],
     "name": "codespaces-blank",
-    "slug": "codespaces-blank"
+    "slug": "codespaces-blank",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d80ea90e-b68e-4d38-9036-19ae6ce02d41"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/d80ea90e-b68e-4d38-9036-19ae6ce02d41"
+    },
+    "android": {},
+    "ios": {}
   }
 }
