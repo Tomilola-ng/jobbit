@@ -3,7 +3,7 @@ import icons from "./icons";
 import { COLORS, FONT, SIZES, SHADOWS } from "./theme";
 
 export { images, icons, COLORS, FONT, SIZES, SHADOWS };
-export const jobTypes = [
+ export const jobTypes = [
   "Full-time",
   "Part-time",
   "Freelance",
