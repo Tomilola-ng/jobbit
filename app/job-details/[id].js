@@ -20,10 +20,9 @@ import {
 import { COLORS, SIZES, icons } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
-const tabs = ["About", "Qualifications", "Responsibilities"];
-
 export default function JobDetails() {
   const router = useRouter();
+  const tabs = ["About", "Qualifications", "Responsibilities"];
   const params = useSearchParams();
   const { data, isLoading, error, refetch } = useFetch("job-details", {
     job_id: params.id,
@@ -109,17 +108,25 @@ export default function JobDetails() {
                     companyName={data[0].employer_name}
                     location={data[0].job_country}
                   />
-
+                  {/*  Controls  */}
                   <JobTabs
                     tabs={tabs}
                     setActiveTab={setActiveTab}
                     activeTab={activeTab}
                   />
+                  {/* Actual Data */}
+                  {displayTabContent()}
                 </>
               )}
             </View>
           )}
         </ScrollView>
+        <JobFooter
+          url={
+            data[0]?.job_google_link ||
+            "https://careers.google.com/jobs/results"
+          }
+        />
       </>
     </SafeAreaView>
   );
