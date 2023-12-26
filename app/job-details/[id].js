@@ -29,9 +29,11 @@ export default function JobDetails() {
   });
   const [refreshing, setRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState(tabs[0]);
-  const onRefresh = () => {
-    return null;
-  };
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    refetch();
+    setRefreshing(false);
+  });
 
   const displayTabContent = () => {
     switch (activeTab) {

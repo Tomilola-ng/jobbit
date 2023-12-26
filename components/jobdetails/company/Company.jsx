@@ -12,7 +12,7 @@ const Company = ({ companyLogo, jobTitle, companyName, location }) => {
           source={{
             uri: checkImageURL(companyLogo)
               ? companyLogo
-              : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
+              : "https://cdn-icons-png.flaticon.com/128/484/484624.png",
           }}
           resizeMode="contain"
           style={styles.logoImage}

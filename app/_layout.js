@@ -13,11 +13,11 @@ export default function Layout() {
   });
 
   const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
+    if (fontsLoaded || fontError) {
       await SplashScreen.hideAsync();
     }
-  }, [fontsLoaded]);
-  if (!fontsLoaded) return null;
+  }, [fontsLoaded.fontError]);
+  if (!fontsLoaded && !fontError) return null;
 
   return <Stack onLayout={onLayoutRootView} />;
 }
