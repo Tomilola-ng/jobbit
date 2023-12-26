@@ -6,7 +6,7 @@ import * as SplashScreen from "expo-splash-screen";
 SplashScreen.preventAutoHideAsync();
 
 export default function Layout() {
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
     DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
     DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
